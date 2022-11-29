@@ -1,0 +1,7 @@
+import '../scss/style.scss'
+import '../js/repairingBrands'
+import '../js/technical'
+import '../js/price'
+import '../js/burger'
+import '../js/callback'
+import '../js/request-call'

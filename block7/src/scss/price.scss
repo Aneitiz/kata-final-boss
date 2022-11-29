@@ -1,0 +1,290 @@
+.price {
+  max-height: auto;
+  position: relative;
+  padding-bottom: 57px;
+  border-bottom: 1px solid $mintColor;
+  &__table {
+    display: none;
+  }
+  &__pagination {
+    text-align: center;
+  }
+  &__slide-inner {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 214px;
+    padding: 16px;
+    background-color: $white;
+  }
+  &__title {
+    @extend %titles-text;
+    background: linear-gradient(270deg, #f8f8f8 0%, #ffffff 98.61%);
+    padding: 16px 0px 16px 16px;
+  }
+  &__inner-title {
+    color: $footerGrey;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0px;
+    text-align: left;
+    margin-bottom: 4px;
+  }
+  &__inner-text {
+    @extend %main-text;
+  }
+  &__services {
+    margin-bottom: 16px;
+  }
+  &__services-price {
+    margin-bottom: 16px;
+  }
+  &__time-button-wrapper {
+    display: flex;
+  }
+  &__time-button-wrapper {
+    flex: 1 auto;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+  &__button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 119px;
+    max-height: 32px;
+    padding: 4px 8px 4px 12px;
+
+    background-color: $mainThemeColor;
+    border-radius: 16px;
+    &:hover {
+      @extend %animation-buttons;
+    }
+    &:active {
+      @extend %animation-buttons;
+    }
+    &:focus {
+      @extend %animation-buttons;
+    }
+  }
+  &__button-text {
+    color: $white;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: 1px;
+    text-align: right;
+  }
+  &__button-dropdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+  }
+  &__info {
+    max-width: 250px;
+    padding-left: 16px;
+  }
+  &__offer {
+    max-width: 192px;
+    margin-top: 10px;
+    padding-left: 16px;
+    &-link {
+      cursor: pointer;
+      @extend %text-larger;
+      &:hover {
+        cursor: pointer;
+        color: $footerGrey;
+        transition: 0.2s color;
+      }
+      &:focus {
+        cursor: pointer;
+        color: $footerGrey;
+        transition: 0.2s color;
+      }
+      &:active {
+        cursor: pointer;
+        color: $footerGrey;
+        transition: 0.2s color;
+      }
+    }
+    &-arrow {
+      margin-top: 6px;
+      margin-left: 8px;
+    }
+  }
+}
+
+@media ($minMd) {
+  .price {
+    display: flex;
+    flex-direction: column;
+    &__title {
+      margin-bottom: 31px;
+      padding-left: 24px;
+    }
+    &__slider {
+      display: none;
+    }
+    &__pagination {
+      display: none;
+    }
+    &__table {
+      display: table;
+      justify-self: center;
+      border-collapse: collapse;
+      background-color: $white;
+      margin: 0px 24px;
+      margin-bottom: 24px;
+      border-radius: 10px;
+      &-button {
+        max-width: 50px;
+      }
+      &-row-3 {
+        &::after {
+          content: '';
+          display: block;
+          position: absolute;
+          width: 95%;
+          height: 1.5px;
+          background-color: $blindGreyColor;
+          left: 2.5%;
+        }
+      }
+      &-row-4 {
+        &::after {
+          content: '';
+          display: block;
+          position: absolute;
+          width: 95%;
+          height: 1.5px;
+          background-color: $blindGreyColor;
+          left: 2.5%;
+        }
+      }
+      &-row-5 {
+        &::after {
+          content: '';
+          display: block;
+          position: absolute;
+          width: 95%;
+          height: 1.5px;
+          background-color: $blindGreyColor;
+          left: 2.5%;
+        }
+      }
+      &-row-6 {
+        &::after {
+          content: '';
+          display: block;
+          position: absolute;
+          width: 95%;
+          height: 1.5px;
+          background-color: $blindGreyColor;
+          left: 16px;
+        }
+      }
+
+      &-cell {
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        text-align-last: left;
+        padding: 23px 16px;
+      }
+      &-row {
+        position: relative;
+        &-title {
+          background-color: $mainWhite;
+        }
+      }
+      &-row-title {
+        color: $footerGrey;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 0px;
+      }
+      &-title {
+        text-align-last: left;
+        padding: 23px 16px;
+        text-align: left;
+      }
+    }
+    &__info {
+      min-width: 451px;
+      padding-left: 24px;
+    }
+    &__offer {
+      min-width: 300px;
+      padding-left: 24px;
+      &-link {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media ($minXl) {
+  .price {
+    &__table {
+      width: 90%;
+      margin: 0 auto;
+      margin-bottom: 32px;
+      &-cell {
+        padding-left: 24px;
+      }
+      &-row-3 {
+        &::after {
+          content: '';
+          display: block;
+          position: absolute;
+          width: 95%;
+          height: 1.5px;
+          background-color: $blindGreyColor;
+          left: 24px;
+        }
+      }
+      &-row-4 {
+        &::after {
+          content: '';
+          display: block;
+          position: absolute;
+          width: 95%;
+          height: 1.5px;
+          background-color: $blindGreyColor;
+          left: 24px;
+        }
+      }
+      &-row-5 {
+        &::after {
+          content: '';
+          display: block;
+          position: absolute;
+          width: 95%;
+          height: 1.5px;
+          background-color: $blindGreyColor;
+          left: 24px;
+        }
+      }
+      &-row-6 {
+        &::after {
+          content: '';
+          display: block;
+          position: absolute;
+          width: 95%;
+          height: 1.5px;
+          background-color: $blindGreyColor;
+          left: 24px;
+        }
+      }
+    }
+    &__info{
+     margin-left: 4%;
+    }
+    &__offer {
+      margin-left: 4%;
+    }
+  }
+}

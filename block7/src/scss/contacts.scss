@@ -1,0 +1,77 @@
+.contacts {
+  display: flex;
+  flex: 1 auto;
+  justify-content: space-between;
+  position: relative;
+  &__button{
+    cursor: pointer;
+  }
+  &__image{
+    border-radius: 20px;
+    cursor: pointer;
+    &:hover{
+      @extend %animation-buttons;
+    }
+    &:active{
+      @extend %animation-buttons;
+    }
+    &:focus{
+      @extend %animation-buttons;
+    }
+  }
+  &__call {
+    display: none;
+  }
+  &__chat {
+    display: none;
+  }
+  &__profile {
+    display: none;
+  }
+  &__call {
+    display: none;
+  }
+  &__chat {
+    display: none;
+  }
+  &__profile {
+    display: none;
+  }
+  &__text{
+    margin-right: 8px;
+    @extend %text-larger;
+  }  
+}
+
+@media ($minMd) {
+  .contacts {
+    justify-content: flex-end;
+    &__item {
+      margin-right: 16px;
+    }
+    &__repair-status {
+      margin-right: 0px;
+    }
+    &__call {
+      display: flex;
+      order: -3;
+    }
+    &__chat {
+      display: flex;
+      order: -2;
+    }
+    &__profile {
+      display: flex;
+      order: -1;
+      &::after {
+        content: '';
+        display: flex;
+        margin-left: 16px;
+        align-self: center;
+        width: 2px;
+        height: 32px;
+        background-color: $blindGreyColor;
+      }
+    }
+  }
+}

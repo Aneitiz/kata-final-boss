@@ -1,0 +1,27 @@
+.footer{
+    background-color: $mainWhite;
+    min-height: 107px;
+    padding-top: 16px;
+    &__text{
+        @extend %footer-text;
+        color: $footerGrey;
+        margin-bottom: 16px;
+    }
+}
+
+@media ($minMd) {
+    .footer{
+        display: flex;
+        justify-content: space-between;
+        &__copyright{
+            text-align: left;
+        }
+        &__public-offer{
+            text-align: right;
+        }
+        &__text{
+            margin-bottom: 0px;
+            margin-right: 16px;
+        }
+    }
+}

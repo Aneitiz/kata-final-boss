@@ -1,0 +1,48 @@
+.navigation {
+  display: flex;
+  overflow-x: scroll;
+  margin-left: 16px;
+  margin-bottom: 24px;
+  &__list {
+    display: flex;
+  }
+  &__item {
+    margin-right: 16px;
+  }
+  &__link {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    cursor: pointer;
+    white-space: nowrap;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.20000000298023224px;
+    text-align: left;
+    color: #7e7e82;
+    padding: 8px 9.3px 8px 16.54px;
+    border: 2px solid rgba(0, 0, 0, 0);
+    border-radius: 6px;
+    &:hover {
+      cursor: pointer;
+    }
+    &:focus {
+      cursor: pointer;
+    }
+    &:active {
+      cursor: pointer;
+    }
+    &:visited {
+      cursor: pointer;
+    }
+    &:hover{
+        border: 2px solid $fadedCyanic;
+        border-radius: 6px;
+    }
+  }
+  &__repairing-brands--selected {
+    border: 2px solid $fadedCyanic;
+    border-radius: 6px;
+    background-color: #ffffff;
+  }
+}

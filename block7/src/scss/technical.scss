@@ -1,0 +1,119 @@
+.technical {
+  padding-bottom: 24px;
+  border: 0.5px solid $mintColor;
+  &__card{
+    display: none;
+  }
+  &__slider {
+    padding-top: 16px;
+    padding-left: 16px;
+    max-height: 262px;
+    padding-bottom: 20px;
+  }
+  &__slide-inner {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 16px;
+    width: 240px;
+    height: 160px;
+    background-color: $white;
+    border: 1px solid $blindGreyColor;
+    border-radius: 6px;
+    &:focus {
+      @extend %animation-buttons-inset;
+    }
+    &:hover {
+      @extend %animation-buttons-inset;
+    }
+    &:active {
+      @extend %animation-buttons-inset;
+    }
+  }
+  &__dropdown {
+    display: flex;
+    align-self: end;
+  }
+  &__pagination {
+    text-align: center;
+  }
+  &__title {
+    padding-left: 16px;
+    padding-top: 16px;
+    @extend %titles-text;
+    padding-bottom: 16px;
+    background: linear-gradient(270deg, #f8f8f8 0%, #ffffff 98.61%);
+  }
+  &__show-more {
+    display: none;
+    font-weight: 500;
+  }
+}
+
+@media ($minMd) {
+  .technical {
+    &__slider {
+      padding-top: 24px;
+      max-height: 100%;
+      padding-bottom: 0px;
+    }
+    &__slider-wrapper {
+      display: grid;
+      grid-template-columns: repeat(3, 4fr);
+      grid-row-gap: 16px;
+    }
+    &__pagination {
+      display: none;
+    }
+    &__slide-md--hidden {
+      display: none;
+    }
+    &__card {
+      display: grid;
+      width: 100%;
+      grid-template-columns: repeat(3, 3fr);
+      grid-row-gap: 16px;
+      margin-top: 16px;
+      max-height: 0px;
+      overflow: hidden;
+      transition: max-height 0.6s ease-out;
+      padding-left: 16px;
+      &--visible {
+        padding-left: 16px;
+        max-height: 366px;
+        transition: max-height 0.6s ease-out;
+      }
+    }
+    &__show-more {
+      padding-top: 24px;
+      padding-left: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &__show-more-image {
+      margin-right: 8px;
+    }
+  }
+}
+
+@media ($minXl) {
+  .technical {
+    &__slider-wrapper {
+      display: grid;
+      grid-template-columns: repeat(4, 2fr);
+      grid-row-gap: 16px;
+      width: 100%;
+      justify-content: center;
+    }
+    &__slide-Xl--visible {
+      display: flex;
+    }
+    &__card {
+      display: grid;
+      grid-template-columns: repeat(4, 2fr);
+      grid-row-gap: 16px;
+      max-width: 100%;
+    }
+  }
+}

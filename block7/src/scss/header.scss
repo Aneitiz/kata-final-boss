@@ -1,0 +1,83 @@
+
+.header {
+  display: flex;
+  align-content: center;
+  background-color: #ffffff;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  padding-left: 16px;
+  padding-right: 16px;
+  &__button {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    &:hover {
+      @extend %animation-buttons;
+    }
+    &:focus {
+      @extend %animation-buttons;
+    }
+    &:active {
+      @extend %animation-buttons;
+    }
+  }
+  &__burger-logo-wrapper {
+    display: flex;
+    flex: 1 auto;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    &::after {
+      content: '';
+      display: flex;
+      margin-right: 6%;
+      align-self: center;
+      width: 2px;
+      height: 32px;
+      background-color: $blindGreyColor;
+    }
+  }
+  &__contacts-wrapper {
+    display: flex;
+    align-items: center;
+    flex: 1 auto;
+  }
+  &__logo-link {
+    display: block;
+    margin-right: 16px;
+  }
+}
+
+@media ($minMd) {
+  .header {
+    padding: 18px 24px;
+    &__burger-logo-wrapper {
+      align-items: center;
+      justify-content: start;
+      &::after {
+        display: none;
+      }
+    }
+    &__burger {
+      display: flex;
+      margin-right: 20px;
+      align-self: center;
+      &::after {
+        content: '';
+        display: flex;
+        margin-left: 20px;
+        align-self: center;
+        width: 2px;
+        height: 32px;
+        background-color: $blindGreyColor;
+      }
+    }
+  }
+}
+
+@media ($minXl) {
+  .header {
+    display: none;
+  }
+}

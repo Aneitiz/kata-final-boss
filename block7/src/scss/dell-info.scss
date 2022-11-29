@@ -1,0 +1,78 @@
+.dell-info {
+  position: relative;
+  padding: 0px 16px;
+  &__text {
+    @extend %main-text;
+  }
+  &__paragraph {
+    margin-bottom: 16px;
+  }
+  &__paragraph-md {
+    position: absolute;
+    visibility: hidden;
+  }
+  &__paragraph-xl {
+    position: absolute;
+    visibility: hidden;
+  }
+  &__button {
+    display: flex;
+    cursor: pointer;
+    margin-bottom: 16px;
+    align-items: center;
+  }
+  &__button-image {
+    margin-right: 8px;
+  }
+  &__read-more {
+    display: flex;
+    @extend %text-larger;
+  }
+}
+
+@media ($minMd) {
+  .dell-info {
+    display: flex;
+    margin: 0;
+    padding-left: 24px;
+    &__text {
+      flex: 1 2;
+    }
+    &__paragraph-md {
+      display: flex;
+      position: static;
+      visibility: visible;
+      margin-bottom: 10px;
+    }
+    &__image-wrapper {
+      display: flex;
+      margin: 0 auto;
+      flex: 1 1;
+      padding-right: 25px;
+    }
+    &__image{
+        margin: 0 auto  ;
+    }
+  }
+}
+
+@media ($minXl) {
+  .dell-info {
+    padding-left: 34px;
+    &__paragraph-xl {
+      display: contents;
+      position: static;
+      visibility: visible;
+    }
+    &__image-wrapper {
+        display: flex;
+        margin: 0 auto;
+        flex: 1 1;
+        padding-right: 25px;
+        object-fit: cover;
+      }
+      &__image{
+        width: 80%;
+      }
+  }
+}

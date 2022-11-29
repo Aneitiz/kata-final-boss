@@ -1,0 +1,56 @@
+%animation-buttons {
+  cursor: pointer;
+  box-shadow: 0px 0px 2px 2px #ff3e79;
+  transition: box-shadow 0.2s;
+}
+
+%animation-buttons-inset {
+  cursor: pointer;
+  box-shadow: 0px 0px 2px 2px #ff3e79 inset;
+  transition: box-shadow 0.2s;
+}
+
+%main-titles {
+  color: $mainBlack;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 40px;
+  letter-spacing: -0.6000000238418579px;
+}
+
+%blind-grey-title {
+  color: $blindGreyColor;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.20000000298023224px;
+}
+
+%main-text {
+  color: $mainBlack;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.20000000298023224px;
+}
+
+%text-larger {
+  color: $mainBlack;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.20000000298023224px;
+}
+
+%footer-text{
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0px;
+  text-align: center;
+}
+
+%titles-text{
+  color:$footerGrey;
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: -0.20000000298023224px;
+
+}
