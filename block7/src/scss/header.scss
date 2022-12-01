@@ -7,21 +7,6 @@
   padding-bottom: 18px;
   padding-left: 16px;
   padding-right: 16px;
-  &__button {
-    cursor: pointer;
-    width: 40px;
-    height: 40px;
-    border-radius: 20px;
-    &:hover {
-      @extend %animation-buttons;
-    }
-    &:focus {
-      @extend %animation-buttons;
-    }
-    &:active {
-      @extend %animation-buttons;
-    }
-  }
   &__burger-logo-wrapper {
     display: flex;
     flex: 1 auto;

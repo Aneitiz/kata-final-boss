@@ -4,11 +4,15 @@
   justify-content: space-between;
   position: relative;
   &__button{
+    width: 40px;
+    height: 40px;
     cursor: pointer;
   }
   &__image{
     border-radius: 20px;
     cursor: pointer;
+    max-width: 100%;
+    height: auto;
     &:hover{
       @extend %animation-buttons;
     }
@@ -72,6 +76,9 @@
         height: 32px;
         background-color: $blindGreyColor;
       }
+    }
+    &__button{
+      width: auto;
     }
   }
 }

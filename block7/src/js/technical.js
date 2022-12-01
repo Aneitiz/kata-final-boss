@@ -29,19 +29,19 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   }
-  function technicalToggler(elements, togglerBtn, togglerBtnText, togglerBtnImage) {
+  function technicalToggler(elements, togglerBtn) {
     togglerBtn.addEventListener('click', () => {
       elements.classList.toggle('technical__card--visible')
       if (elements.classList.contains('technical__card--visible')) {
-        togglerBtnText.innerHTML = 'скрыть'
-        togglerBtnImage.src = 'img/arrows-up.svg'
+        technicalShowMoreText.textContent = 'скрыть'
+        technicalShowMoreImage.src = 'img/arrows-up.svg'
       } else if (elements.classList.contains('technical__card')) {
-        togglerBtnText.innerHTML = 'Показать всё'
-        togglerBtnImage.src = 'img/arrows-dawn.svg'
+        technicalShowMoreText.textContent = 'Показать всё'
+        technicalShowMoreImage.src = 'img/arrows-dawn.svg'
       }
     })
   }
-  technicalToggler(technicalCard, technicalShowMore, technicalShowMoreText,technicalShowMoreImage);
+  technicalToggler(technicalCard, technicalShowMore);
   technicalMobileSlider();
   mediaChangeHandler.addEventListener('change', () => {
     technicalMobileSlider();

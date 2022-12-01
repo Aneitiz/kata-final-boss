@@ -1,11 +1,15 @@
-body{
-    font-family: "TT Lakes";
+body {
+  font-family: 'TT Lakes';
 }
 .container {
-    margin: 0 auto;
-    width: 100%;
-  }
+  z-index: 6;
+  margin: 0 auto;
+  width: 100%;
+}
 
-.scroll-lock{
-    overflow: hidden;
+.scroll-lock {
+  overflow: hidden;
+  z-index: 7;
+  position: fixed;
+  max-width: 100vw;
 }

@@ -1,5 +1,5 @@
 .request-call__modal-wrapper {
-  z-index: 5;
+  z-index: 10;
   position: absolute;
   right: 0;
   max-width: 0;
@@ -11,7 +11,7 @@
   position: fixed;
   max-width: 100%;
   position: fixed;
-  z-index: 5;
+  z-index: 10;
   background-color: $white;
   transition: 0.4s all ease-in-out;
 }
@@ -26,6 +26,12 @@
     width: 40px;
     height: 40px;
     margin-bottom: 40px;
+  }
+  &-modal-button {
+    width: 40px;
+    height: 40px;
+    background-image: url('../img/call.svg');
+    background-size: contain;
   }
   &__title {
     position: relative;
@@ -65,18 +71,18 @@
   .request-call {
     float: right;
     background-color: $white;
-    box-shadow: 16px 0px 52px 0px #0E185033;
+    box-shadow: 16px 0px 52px 0px #0e185033;
 
-    box-shadow: -2px 0px 4px 0px #454F7E05;
+    box-shadow: -2px 0px 4px 0px #454f7e05;
 
     max-width: 440px;
   }
-  .request-call__modal-wrapper{
+  .request-call__modal-wrapper {
     position: fixed;
   }
-  .request-call__modal-wrapper--active{
+  .request-call__modal-wrapper--active {
     position: fixed;
     width: 100vw;
-    background-color: rgba(255,255,255,0.9);
+    background-color: rgba(255, 255, 255, 0.9);
   }
 }
