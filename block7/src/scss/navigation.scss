@@ -27,22 +27,27 @@
       cursor: pointer;
     }
     &:focus {
+      border: 2px solid $fadedCyanic;
+      border-radius: 6px;
+      background-color: #ffffff;
       cursor: pointer;
     }
     &:active {
+      border: 2px solid $fadedCyanic;
+      border-radius: 6px;
+      background-color: #ffffff;
       cursor: pointer;
     }
     &:visited {
+      border: 2px solid $fadedCyanic;
+      border-radius: 6px;
+      background-color: #ffffff;
       cursor: pointer;
     }
-    &:hover{
-        border: 2px solid $fadedCyanic;
-        border-radius: 6px;
+    &:hover {
+      border: 2px solid $fadedCyanic;
+      border-radius: 6px;
+      background-color: #ffffff;
     }
-  }
-  &__repairing-brands--selected {
-    border: 2px solid $fadedCyanic;
-    border-radius: 6px;
-    background-color: #ffffff;
   }
 }

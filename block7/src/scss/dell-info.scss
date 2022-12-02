@@ -1,3 +1,27 @@
+.dell-info__paragraph-md--active {
+  max-height: auto;
+  display: flex;
+  position: static;
+  visibility: visible;
+  margin-bottom: 10px;
+  transition: 0.2s all ease-in;
+}
+.dell-info__paragraph-xl--active {
+  display: flex;
+  position: static;
+  visibility: visible;
+  margin-bottom: 10px;
+  max-height: auto;
+  transition: 0.2s all ease-in;
+}
+.dell-info__paragraph-xxl--active{
+  display: flex;
+  position: static;
+  visibility: visible;
+  margin-bottom: 10px;
+  max-height: 100%;
+  transition: 0.2s all ease-in;
+}
 .dell-info {
   position: relative;
   padding: 0px 16px;
@@ -8,12 +32,19 @@
     margin-bottom: 16px;
   }
   &__paragraph-md {
-    position: absolute;
+    max-height: 0;
     visibility: hidden;
+    transition: 0.2s max-height ease-in;
   }
   &__paragraph-xl {
-    position: absolute;
+    max-height: 0;
     visibility: hidden;
+    transition: 0.2s max-height ease-in;
+  }
+  &__paragraph-xxl{
+    max-height: 0;
+    visibility: hidden;
+    transition: 0.2s max-height ease-in;
   }
   &__button {
     display: flex;
@@ -43,6 +74,7 @@
       position: static;
       visibility: visible;
       margin-bottom: 10px;
+      min-height: 30px;
     }
     &__image-wrapper {
       display: flex;
@@ -50,8 +82,8 @@
       flex: 1 1;
       padding-right: 25px;
     }
-    &__image{
-        margin: 0 auto  ;
+    &__image {
+      margin: 0 auto;
     }
   }
 }
@@ -63,16 +95,17 @@
       display: contents;
       position: static;
       visibility: visible;
+      min-height: 40px;
     }
     &__image-wrapper {
-        display: flex;
-        margin: 0 auto;
-        flex: 1 1;
-        padding-right: 25px;
-        object-fit: cover;
-      }
-      &__image{
-        width: 80%;
-      }
+      display: flex;
+      margin: 0 auto;
+      flex: 1 1;
+      padding-right: 25px;
+      object-fit: cover;
+    }
+    &__image {
+      width: 80%;
+    }
   }
 }

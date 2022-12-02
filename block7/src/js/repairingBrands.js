@@ -9,15 +9,15 @@ import Swiper, { Navigation, Pagination } from 'swiper';
 export default mediaChangeHandler;
 document.addEventListener('DOMContentLoaded', () => {
   let mySwiper
-    function sliderToggler (elements, togglerBtn,togglerBtnText,togglerBtnImage) {
+    function sliderToggler (elements, togglerBtn) {
     togglerBtn.addEventListener('click', () => {
       elements.classList.toggle('card__visible')
       if (elements.classList.contains('card__visible')) {
-        togglerBtnText.innerHTML = 'скрыть'
-        togglerBtnImage.src = 'img/arrows-up.svg'
+        sliderBtnText.textContent = 'скрыть'
+        sliderBtnImage.src = 'img/arrows-up.svg'
       } else if (elements.classList.contains('card')) {
-        togglerBtnText.innerHTML = 'Показать всё'
-        togglerBtnImage.src = 'img/arrows-dawn.svg'
+        sliderBtnText.textContent = 'Показать всё'
+        sliderBtnImage.src = 'img/arrows-dawn.svg'
       }
     })
   }
@@ -46,5 +46,5 @@ document.addEventListener('DOMContentLoaded', () => {
   mediaChangeHandler.addEventListener('change', () => {
     mobileSlider()
   })
-  sliderToggler(cardHiddenItem,sliderShowBtn,sliderBtnText,sliderBtnImage);
+  sliderToggler(cardHiddenItem,sliderShowBtn);
 })
