@@ -969,18 +969,48 @@ body {
     .navigation__link:hover {
       cursor: pointer; }
     .navigation__link:focus {
+      border: 2px solid #B8FFEC;
+      border-radius: 6px;
+      background-color: #ffffff;
       cursor: pointer; }
     .navigation__link:active {
+      border: 2px solid #B8FFEC;
+      border-radius: 6px;
+      background-color: #ffffff;
       cursor: pointer; }
     .navigation__link:visited {
+      border: 2px solid #B8FFEC;
+      border-radius: 6px;
+      background-color: #ffffff;
       cursor: pointer; }
     .navigation__link:hover {
       border: 2px solid #B8FFEC;
-      border-radius: 6px; }
-  .navigation__repairing-brands--selected {
-    border: 2px solid #B8FFEC;
-    border-radius: 6px;
-    background-color: #ffffff; }
+      border-radius: 6px;
+      background-color: #ffffff; }
+
+.dell-info__paragraph-md--active {
+  max-height: auto;
+  display: flex;
+  position: static;
+  visibility: visible;
+  margin-bottom: 10px;
+  transition: 0.2s all ease-in; }
+
+.dell-info__paragraph-xl--active {
+  display: flex;
+  position: static;
+  visibility: visible;
+  margin-bottom: 10px;
+  max-height: auto;
+  transition: 0.2s all ease-in; }
+
+.dell-info__paragraph-xxl--active {
+  display: flex;
+  position: static;
+  visibility: visible;
+  margin-bottom: 10px;
+  max-height: 100%;
+  transition: 0.2s all ease-in; }
 
 .dell-info {
   position: relative;
@@ -988,11 +1018,17 @@ body {
   .dell-info__paragraph {
     margin-bottom: 16px; }
   .dell-info__paragraph-md {
-    position: absolute;
-    visibility: hidden; }
+    max-height: 0;
+    visibility: hidden;
+    transition: 0.2s max-height ease-in; }
   .dell-info__paragraph-xl {
-    position: absolute;
-    visibility: hidden; }
+    max-height: 0;
+    visibility: hidden;
+    transition: 0.2s max-height ease-in; }
+  .dell-info__paragraph-xxl {
+    max-height: 0;
+    visibility: hidden;
+    transition: 0.2s max-height ease-in; }
   .dell-info__button {
     display: flex;
     cursor: pointer;
@@ -1014,7 +1050,8 @@ body {
       display: flex;
       position: static;
       visibility: visible;
-      margin-bottom: 10px; }
+      margin-bottom: 10px;
+      min-height: 30px; }
     .dell-info__image-wrapper {
       display: flex;
       margin: 0 auto;
@@ -1029,7 +1066,8 @@ body {
     .dell-info__paragraph-xl {
       display: contents;
       position: static;
-      visibility: visible; }
+      visibility: visible;
+      min-height: 40px; }
     .dell-info__image-wrapper {
       display: flex;
       margin: 0 auto;
