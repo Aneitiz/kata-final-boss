@@ -6,7 +6,7 @@ const technicalShowMoreText = document.querySelector('.technical__card-show-more
 const technicalShowMoreImage = document.querySelector('.technical__show-more-image')
 import mediaChangeHandler from '../js/repairingBrands'
 
-document.addEventListener('DOMContentLoaded', () => {
+
   let technicalSwiper;
   function technicalMobileSlider() {
     if (!mediaChangeHandler.matches) {
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
   mediaChangeHandler.addEventListener('change', () => {
     technicalMobileSlider();
   })
-});
+
 
 
 

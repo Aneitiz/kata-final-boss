@@ -3,8 +3,8 @@ const price = document.querySelector('.price__slider')
 import mediaChangeHandler from '../js/repairingBrands'
 import Swiper, { Navigation, Pagination } from 'swiper';
 
-document.addEventListener('DOMContentLoaded', () => {
-    let priceSlider;
+
+  let priceSlider;
   function priceMobileSlider() {
     if (!mediaChangeHandler.matches) {
         priceSlider = new Swiper(price, {
@@ -30,4 +30,4 @@ document.addEventListener('DOMContentLoaded', () => {
   mediaChangeHandler.addEventListener('change', () => {
     priceMobileSlider()
   })
-})
+
